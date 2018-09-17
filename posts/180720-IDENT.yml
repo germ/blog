@@ -1,0 +1,18 @@
+---
+title: IDENTIFICATION DIVISION
+tags: [ cobol, jwz ]
+id: '175684132073'
+---
+I don't know why now seems to be the time to start blogging again, but it is. I've been inspired by the flaming dumpster fire that is the JWZ experience and am simply nostalgic for a slightly less noisy form of social media.
+
+
+My name is Jeremy Bernhardt, I'm 24 an auditor for a hotel living in the middle of nowheresville-Saskatchewan, a college dropout, a former painter, duct tape programmer and newly minted mainframe enthusiast. I earn my wage by trading in my social life for a computer and a desk, it's quiet but COBOL doesn't write itself. 
+
+[[MORE]]
+This isn't some SEO nonsense, attempt to catalogue my life or share shit on social. It's more in line with a continuous stream of nonsense from a melancholic Canadian. Consider it my take on \_whys' [Print-Spool blog](https://www.scribd.com/doc/136875051/why-s-complete-printer-spool-as-one-book). Honestly, I'll figure out what to do with the space as time crawls on.
+
+
+On the theme, 80 columns are more than enough for most code. This was drilled into me by my peers but it never made sense, why 80? Why not 125 or some other damn number. Most CRT terminals created were 80 cols wide so we're stuck with a software/dogmatic width based on hardware that was obsoleted 20+ years ago. When I connect to a zOS Mainframe and interact with it I'm using an IBM3270 terminal emulator mimicking an 80x24 character display and every interaction is defined in these dimensions. Time has gone on, but we're stuck with 80cols in ISPF panels, Cobol line lengths based on punched cards, multiple OS defaults and arguments of where to throw the \\n. The theme was created around the SDSF facilities UI, but the godawful green had to go. Replaced it with the [same scheme](http://ethanschoonover.com/solarized) that I use in my emulator. 
+
+
+Thanks for coming on by.

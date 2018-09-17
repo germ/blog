@@ -1,0 +1,34 @@
+---
+title: DUCT-TAPE.
+tags: [ cobol, programming, zos, jank ]
+id: '175684132073'
+---
+I’ve come to a realization that I’m a bit of a duct tape programmer. Don’t get me wrong, I love some solid well-thought-out engineering and on occasion can show some forethought, but today is not one of those days.
+
+
+
+Currently, I have VSCode hooked into a mainframe, and COBOL serving JSON requests. There’s a shitload of adapters involved and all I can smell is PVC from a hardware stores plumbing aisle.
+
+
+
+[[MORE]]
+
+
+
+For the past week or three, I’ve been teaching myself fucking COBOL and trying to learn zOS. It’s been a bit of a shock wading through IBM manuals and learning about these strange archaic and cutting edge boxes, but I’m adapting to the environment. Rather than simply using my bolt-on tools (Such as the wonderful ports of FOSS tools to zOS by the folks at Rocket) and cruft I’m opting for a balanced approach. Jank at with VSCode / SSH sessions and whatnot and only a 3270 for when I’m at work. So how the fuck do you use VSCode for COBOL on zOS?
+
+
+
+In short: COBOL syntax packs, FakeVim, network mapping SFTP drives, writing out to USS, having scripts for packing/encoding bidirectionally from PDS and then having a JCL card handy in USS to cat, iconv and submit (via the submit command). In theory, you could get away from viewing the output with SDSF, but it’s more/less right there anyway. It’s a little screwy but only requires a save from VSCode, running a command to submit and then flipping over to my 3270.
+
+
+
+COBOL web services are a little more screwy but linear. In short: Browser -> JSON marshalled post -> IHS -> CGI bash script (parse env, template to JCL card) -> sh submit -> Run pgm as user for DB2 access -> read data from templated DDs and process/verify query/submission -> Unmarshall JSON into COBOL types and process request -> Marshall data -> Write to Unix file -> CGI script sees GUID of file and serves res -> IHS deals with encoding.
+
+
+
+Goddamn, I wish I had access to zOS Connect or something. That’s super janky.
+
+
+
+(Seriously though, mad props to the guys at Rocket. I couldn't get golang for zOS working properly, but it would have made this 100x less crufty. I'll RTFM and give it another shot soon)
